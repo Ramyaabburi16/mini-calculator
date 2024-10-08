@@ -14,20 +14,20 @@ operation_dict={
     "/":divide
 }
 def calculation():
-    n1=int(input("Enter first number:"))
+    number1=int(input("Enter first number:"))
     for symbol in operation_dict:
      print(symbol)
     continue_flag=True
     while continue_flag:
         op_symbol=input("pick an operation:")
-        n2=int(input("Enter second number:"))
+        number2=int(input("Enter second number:"))
         calculator_function=operation_dict[op_symbol]
         output=calculator_function(n1,n2)
         print(output)
 
         should_continue=input(f"Enter 'yes' to continue calculation with{output}or 'new' to start a new calculation or 'N0' to exit").lower()
         if should_continue=='yes':
-            n1=output
+            number1=output
         elif should_continue=='new':
             continue_flase=False
             os.system('cls')
