@@ -1,3 +1,4 @@
+import os
 def add(a,b):
     return a+b
 def subtract(a,b):
@@ -29,6 +30,7 @@ def calculation():
             n1=output
         elif should_continue=='new':
             continue_flase=False
+            os.system('cls')
             calculation()
         
         else:
